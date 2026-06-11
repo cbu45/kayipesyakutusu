@@ -1,0 +1,463 @@
+:root {
+  --primary: #2b7fec;
+  --secondary: #ff912b;
+  /* --accent: #81c784; */
+  --accent: #ddcd3a;
+  --dark: #212121;
+  --light: #f9fbe7;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* background-color: var(--light); */
+  background-color: #f4f4f4;
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Modern Tipografik Logo --- */
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -1px;
+  user-select: none;
+}
+.logo .font-light {
+  font-weight: 300;
+  color: var(--dark);
+}
+.logo .dot {
+  color: var(--secondary);
+}
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.hero-advanced {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/kayipEsya.jpg") no-repeat 20% center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  height: 100vh;
+  height: 100dvh;
+}
+@media (max-width: 768px) {
+  .hero-advanced {
+    background-position: 10% center !important;
+  }
+}
+
+/* .hero-advanced::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+} */
+
+.hero-advanced .content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero-advanced {
+    background-position: left center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-advanced {
+    background-position: center top;
+    height: 100vh;
+  }
+}
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.btn-primary {
+  padding: 15px 35px;
+  background: var(--white);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* --- Sayaç Tasarımı --- */
+.stats-section {
+  background-color: var(--dark);
+  /* background-color: var(--primary); */
+  color: var(--white);
+  padding: 60px 5%;
+  text-align: center;
+}
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stat-box {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+}
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+.stat-box p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Kartlar ve Detay Sayfaları */
+.topics-grid {
+  padding: 80px 5%;
+  text-align: center;
+}
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+.topic-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--dark);
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+}
+.topic-card:hover {
+  transform: translateY(-15px);
+  border-color: var(--accent);
+}
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.topic-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+.topic-card p {
+  margin-bottom: 20px;
+  color: #666;
+  flex-grow: 1;
+}
+.read-more {
+  font-weight: 600;
+  color: var(--secondary);
+  transition: 0.3s;
+}
+.topic-card:hover .read-more {
+  transform: translateX(10px);
+}
+
+.page-header {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  /* margin-top: 70px; */
+}
+.page-header h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.reading-container {
+  max-width: 800px;
+  margin: -50px auto 50px auto;
+  background: var(--white);
+  padding: 38px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+.detailed-text h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.detailed-text h3 {
+  color: var(--secondary);
+  margin: 30px 0 15px 0;
+}
+.detailed-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #444;
+}
+.detailed-text img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+blockquote {
+  font-style: italic;
+  font-size: 1.3rem;
+  border-left: 5px solid var(--secondary);
+  padding: 20px;
+  margin: 30px 0;
+  background: var(--light);
+  color: var(--primary);
+}
+.action-list {
+  list-style: none;
+}
+.action-list li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+.action-list li::before {
+  content: "🌱";
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* --- Yeni Profesyonel Footer --- */
+.site-footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+.footer-logo .font-light {
+  font-weight: 300;
+}
+.footer-logo .dot {
+  color: var(--secondary);
+}
+.copyright {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.disclaimer {
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.6;
+  text-align: justify;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animasyonlar */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  /* color: #fff; */
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  /* color: white; */
+  cursor: pointer;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    background: white;
+    /* background: #1b5e20; */
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 15px;
+  }
+}
+
+/* Kayıp Eşyalar */
+
+.esyalar-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--dark);
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.esyalar-card:hover {
+  transform: translateY(-15px);
+  border-color: var(--accent);
+}
+
+.esyalar:hover {
+  transform: translateX(10px);
+}
+
+#kayipEsyalar {
+  a {
+    color: var(--secondary);
+  }
+
+  a:hover {
+    background-color: var(--secondary);
+    color: white;
+  }
+}
+
+/* Kayıp Eşyalar */
