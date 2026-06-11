@@ -76,7 +76,7 @@ body {
   height: 100vh;
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/kayipEsya.jpg") no-repeat 20% center / cover;
+    url(/images/kayipEsya.jpg) no-repeat 20% center / cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,12 +91,7 @@ body {
   }
 }
 
-/* .hero-advanced::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-} */
+
 
 .hero-advanced .content {
   position: relative;
